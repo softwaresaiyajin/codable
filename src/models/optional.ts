@@ -13,7 +13,7 @@ export const optional = (type: IType): IModel => {
       throw errors.missingSubType(key, type.name);
     }
 
-    if (value === undefined) {
+    if (value === undefined || value === null) {
       return true;
     }
 
